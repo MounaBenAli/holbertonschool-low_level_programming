@@ -10,13 +10,12 @@ if (n < 0)
 {
 printf("%d is negative\n", n);
 }
-else if (n = 0)
-{
-printf("0 is zero \n");
-}
 else if (n > 0)
 {
 printf("%d is positive\n", n);
 }
-return (0);
+else
+(n == 0)
+; printf("0 is zero\n")
+; return (0);
 }
