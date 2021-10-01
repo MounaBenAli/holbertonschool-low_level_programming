@@ -1,6 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/**
+* main - Prints if number is zero, negative or positive.
+*
+* Return: Always (Sucess)
+*/
 int main(void)
 {
 int n;
