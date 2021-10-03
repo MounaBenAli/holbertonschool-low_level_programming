@@ -6,12 +6,9 @@
 */
 int main(void)
 {
-char stmt[100];
-int i;
 char ch;
-for (ch = 'a'; ch <= 'z'; ch++)
-for (i-- ; i >= 0; i--)
-putchar(stmt[i]);
+for (ch = 'z'; ch <= 'a'; ch--)
+putchar(ch);
 putchar('\n');
 return (0);
 }
