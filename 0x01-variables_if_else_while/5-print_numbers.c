@@ -1,8 +1,8 @@
 #include<stdio.h>
 /**
-* main _ Program that prints single digit numbers of base 10 starting from 0
+* main - Prints numbers from 0 to 9.
 *
-* Return: Always(Success)
+* Return: Always (Success)
 */
 int main(void)
 {
