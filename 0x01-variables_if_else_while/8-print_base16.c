@@ -1,20 +1,19 @@
 #include<stdio.h>
 /**
-* main - Prints numbers of base 16(Hexadecimal).
+* main - Prints numbers of base 16(Hexadecimal)in lower case.
 *
 * Return: Always (Success)
 */
 int main(void)
 {
-char n;
-char hex;
-for (n = '0'; n <= '9'; n++)
+char ch;
+for (ch = '0'; ch <= ''; ch++)
 {
-putchar(n);
+putchar(ch);
 }
-for (hex = '% x'; hex <= '15'; hex++)
+for (ch = 'a'; ch <= 'f'; ch++)
 {
-putchar(hex);
+putchar(ch);
 }
 putchar('\n');
 return (0);
