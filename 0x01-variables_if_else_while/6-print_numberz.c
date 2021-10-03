@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
-* main - Prints numbers from 0 to 9.
+* main - Prints numbers from 0 to 9.without char
 *
 * Return: Always (Success)
 */
