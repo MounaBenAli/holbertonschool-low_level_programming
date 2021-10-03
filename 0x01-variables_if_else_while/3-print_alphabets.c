@@ -1,17 +1,20 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
 *main - Program that prints the alphabet in lowercas, and then in uppercase
 *
 * Return: Always(Success)
 */
-int  main(void)
+int main(void)
 {
-char ( ch,CH );
-for (ch = 'a'; ch = 'A'; ch <= 'z'; ch <= 'Z'; ch++; CH++)
+char ch;
+for (ch = 'a'; ch <= 'z'; ch++)
+{
 putchar(ch);
-putchar(CH);
+}
+for (ch = 'A'; ch <= 'Z'; ch++)
+{
+putchar(ch);
+}
 putchar ('\n');
 return (0);
 }
