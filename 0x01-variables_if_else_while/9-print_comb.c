@@ -1,20 +1,21 @@
 #include<stdio.h>
 /**
- * main - prints all possible combinations of single-digit numbers with ','
+ * main - prints all possible combinations of single-digit numbers with ','\' '
  *
  * Return: Always (Success)
  */
 int main(void)
 {
 int ch;
-int c;
 for (ch = '0'; ch <= '9'; ch++)
 {
 putchar(ch);
-}
-for (c = ','; c)
+if (ch != '9')
 {
-putchar(c);
+putchar(',');
+putchar(' ');
 }
+}
+putchar('\n');
 return (0);
 }
