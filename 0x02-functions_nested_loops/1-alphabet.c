@@ -5,9 +5,10 @@
 * Return: Always(Success)
 */
 void print_alphabet(void);
-char c = 'a';
-for (c = 'a'; ch <= 'z'; ch++)
-_putchar(c);
-_putchar('\n');
+int  main(void)
+{
+char ch;
+for (ch = 'a'; ch <= 'z'; _putchar);
+putchar ('\n');
 return (0);
 }
