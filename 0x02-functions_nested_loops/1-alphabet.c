@@ -4,11 +4,10 @@
 *
 * Return: Always(Success)
 */
-void print_alphabet(void);
-int  main(void)
+void print_alphabet(void)
 {
-char ch;
-for (ch = 'a'; ch <= 'z'; _putchar);
-putchar ('\n');
-return (0);
+char c;
+for (c = 'a'; c <= 'z'; c++)
+_putchar(c);
+_putchar ('\n');
 }
