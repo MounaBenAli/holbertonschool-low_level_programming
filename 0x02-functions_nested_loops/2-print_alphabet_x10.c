@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*print_alphabet -prints the alphabet in lowercase
+*print_alphabet_x10 -prints the alphabet ten times in lowercase
 *
 * Return: Always(Success)
 */
@@ -13,4 +13,4 @@ while (count++ <= 9)
 for (c = 'a'; c <= 'z'; c++)
 _putchar(c);
 _putchar ('\n');
-}
+};
