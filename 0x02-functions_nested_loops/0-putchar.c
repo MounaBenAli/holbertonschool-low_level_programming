@@ -1,12 +1,14 @@
-#include "main.h"
+#include "main.h">
 /**
-*main - Prints _putchar followed by new line
+*main - prints the alphabet in lowercase
 *
 * Return: Always(Success)
 */
-int main(void)
+int  main(void)
 {
-char;	
-_putchar("_putchar",'\n');
+char ch;
+for (ch = 'a'; ch <= 'z'; ch++)
+_putchar(ch);
+_putchar ('\n');
 return (0);
 }
