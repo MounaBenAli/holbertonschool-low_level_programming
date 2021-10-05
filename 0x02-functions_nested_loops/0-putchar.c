@@ -6,8 +6,8 @@
 */
 int  main(void)
 {
-char ch = _putchar;
-_putchar(ch);
+char;
+_putchar("/_putchar");
 _putchar ('\n');
 return (0);
 }
