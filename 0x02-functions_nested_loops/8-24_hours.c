@@ -5,7 +5,7 @@
  *
  * Return: every minute of th day.
  */
-void jack_bauer(void ,n)
+void jack_bauer(void)
 {
 int n;
 for (n = 0, n < 3, n++)
