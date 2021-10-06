@@ -6,22 +6,19 @@
  * @c: third integer
  * Return: largest number
  */
-int main(void)
+int largest_number(int a, int b, int c)
 {
-int a, b, c;
-printf("Please Enter Three different values\n");
-scanf("%d %d %d", &a, &b, &c);
+int largest;
 if (a > b && a > c)
 {
-printf("%d is the largest number\n", a);
+largest = a;
 }
 else if (b > a && b > c)
 {
-printf("%d is the largest number\n", b);
+largest = b;
 }
-else (c > a && c > b)
 {
-printf("%d is the largest number\n", c);
+largest = c;
 }
-return (0);
+return (largest);
 } 
