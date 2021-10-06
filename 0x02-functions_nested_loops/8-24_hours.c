@@ -5,25 +5,25 @@
  *
  * Return: every minute of th day.
  */
-void jack_bauer(void)
+void
+jack_bauer (void)
 {
-int n, e, f, j;
-for (n = '0'; n < '3'; n++)
+int a, b, c, d;
+for (a = 0; a < 3; a++)
 {
-_putchar(n + '0');
+for (b = 0; b < 4; b++)
+{
+for (c = 0; c < 6; c++)
+{
+for (d = 0; d < 9; d++)
+{
+_putchar (a);
+_putchar (b);
+_putchar (c);
+_putchar (d);
+_putchar ('\n');
 }
-for (e = '0'; e < '4'; e++)
-{
-_putchar(e + '0');
-_putchar(':');
 }
-for (f = '0'; f < '6'; f++)
-{
-_putchar(f + '0');
 }
-for (j = '0'; j > '9'; j++)
-{
-_putchar(j + '0'); 
-_putchar('\n');
 }
 }
