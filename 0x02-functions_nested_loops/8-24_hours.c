@@ -1,29 +1,29 @@
 #include "main.h"
 /**
- * jack_bauer- every minute of the day starting from 00:00 to 23:59.
+ * jack_bauer- prints every minute of the day starting from 00:00 to 23:59.
  * @n: The number in question.
  *
  * Return: every minute of th day.
  */
 void jack_bauer(void)
 {
-int n;
-for (n = 0, n < 3, n++)
+int n, e, f, j;
+for (n = '0'; n < '3'; n++)
 {
-_putchar(n)
+_putchar(n);
 }
-for (n = 0, n < 4, n++)
+for (e = '0'; e < '4'; e++)
 {
-_putchar(n)
-_putchar(":")
+_putchar(e);
+_putchar(':');
 }
-for (n = 0, n < 6, n++)
+for (f = '0'; f < '6'; f++)
 {
-_putchar(n)
+_putchar(f);
 }
-for (n = 0, n < 10, n++)
-{_putchar(n)
-_putchar("\n")
+for (j = '0'; j > '9'; j++)
+{
+_putchar(j);
+_putchar('\n');
 }
-return (0)
 }
