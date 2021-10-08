@@ -12,7 +12,7 @@ if (n <= 0)
 {
 _putchar('\n');
 }
-else 
+else
 {
 for (a = 0; a < n; a++)
 {
