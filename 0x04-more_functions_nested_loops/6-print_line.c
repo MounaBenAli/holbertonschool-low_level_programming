@@ -13,6 +13,6 @@ for (a = 1; a < n; a++)
 _putchar('_');
 _putchar('\n');
 }
-else 
+else
 _putchar('\n');
 }
