@@ -1,8 +1,9 @@
 #include "main.h"
 /**
-*print_most_numbers - a function that draws a diagonal line on the terminal.
+*print_diagonal - a function that draws a diagonal line on the terminal.
 *
-* Return: Always(Success)
+* @n :is the number of times the character \ should be printed
+* Return: diagonal line
 */
 void print_diagonal(int n)
 {
