@@ -13,6 +13,5 @@ for (len = 0; *s != '\0'; s++)
 len++;
 while (len >= 0)
 _putchar(*s--), len--;
-_putchar(-1);
 _putchar('\n');
 }
