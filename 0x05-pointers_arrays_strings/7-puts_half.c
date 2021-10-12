@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
 * puts_half- Prints second half of string to the stdout
 *
