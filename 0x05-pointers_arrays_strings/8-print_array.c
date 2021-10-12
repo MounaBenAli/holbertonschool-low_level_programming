@@ -11,5 +11,13 @@ void print_array(int *a, int n)
 {
 int loop;
 for (loop = 0; loop < n ; loop++)
-printf("%d, ", a[loop]);
+{
+printf("%d", a[loop]);
+if (loop != (n - 1))
+{
+printf(", ");
 }
+}
+printf("\n");
+}
+
