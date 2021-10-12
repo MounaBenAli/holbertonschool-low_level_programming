@@ -4,7 +4,6 @@
 * puts_half- Prints second half of string to the stdout
 *
 * @str: The string to print
-* @n: the last charachters of the string
 * Return: empty
 */
 void puts_half(char *str)
