@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * *string_toupper - string upper
+ * @s: string
+ * Return: string upper
+ */
 char *string_toupper(char *s)
 {
 int i = 0;
