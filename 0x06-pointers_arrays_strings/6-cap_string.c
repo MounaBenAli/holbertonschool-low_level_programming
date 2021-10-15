@@ -7,30 +7,34 @@
  */
 char *cap_string(char *str)
 {
-int i;
-for (i = 0; str[i] != '\0'; i++)
+int i = 0;
+for (i = 0; str[0] >= 97 && str[0] <= 122; i++)
 {
-if (i == 0)
-{
-if ((str[i] >= 'a' && str[i] <= 'z'))
-str[i] = str[i] - 32;
-continue;
+str[0] = (str[0] - 32);
 }
-if (str[i] == ' ')
+while (str[i])
 {
-++i;
-if (str[i] >= 'a' && str[i] <= 'z')
+if ((str[i] == ',') || (str[i] == ';') ||
+(str[i] == '!') || (str[i] == '.') ||
+(str[i] == '?') || (str[i] == '"') ||
+(str[i] == '(') || (str[i] == ')') ||
+(str[i] == '{') || (str[i] == '}') ||
+(str[i] == '\n') || (str[i] == ' '))
 {
-str[i] = str[i] - 32;
-continue;
+i++;
+if (str[i] >= 97 && str[i] <= 122)
+str[i] = (str[i] - 32);
+i--;
 }
-}
-else
+else if (str[i] == '\t')
 {
-if (str[i] >= 'A' && str[i] <= 'Z')
-str[i] = str[i] + 32;
+str[i] = (str[i] + 23);
+i++;
+if (str[i] >= 97 && str[i] <= 122)
+str[i] = (str[i] - 32);
+i--;
 }
+i++;
 }
 return (str);
 }
-
