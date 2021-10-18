@@ -20,7 +20,6 @@ return (s);
 }
 else
 {
-(*s = '\0');
-return (0);
+return ('\0');
 }
 }
