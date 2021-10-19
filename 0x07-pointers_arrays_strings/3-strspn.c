@@ -15,7 +15,7 @@ n = strlen(s);
 l = strlen(accept);
 for (i = 0; i < n; i++)
 {
-for (j = 0; j < l; j++ )
+for (j = 0; j < l; j++)
 {
 if (s[i] == accept[j])
 break;
