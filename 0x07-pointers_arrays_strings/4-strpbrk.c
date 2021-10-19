@@ -3,7 +3,7 @@
  * _strpbrk-locates the first occurence in the s of any of the bytes of accept.
  * @s: source string
  * @accept: accepted string
- * Return: a pointer *ptr to the byte in s that matches accept or NULL
+ * Return: a pointer  to the byte in s that matches accept or NULL
  */
 char *_strpbrk(char *s, char *accept)
 {
