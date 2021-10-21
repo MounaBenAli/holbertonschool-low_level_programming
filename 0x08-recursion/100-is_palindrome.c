@@ -24,9 +24,9 @@ int check_palindrome(int i, int j, char *p)
 {
 if (i >= j)
 return (1);
-if (p[l] != p[r])
+if (p[j] != p[i])
 return (0);
-return (check_palindrome(l + 1, r - 1, p));
+return (check_palindrome(i + 1, j - 1, p));
 }
 /**
  * is_palindrome - states if a string is a palindrome
