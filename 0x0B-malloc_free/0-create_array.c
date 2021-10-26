@@ -5,8 +5,7 @@
   * create_array- Creates an array of chars,intiliazes it with a specific char
   * @size: of the array
   * @c: the first char of the array
-  * Return: NULL if is size = 0
-  * Return: a pointer to the array, or NULL if it fails
+  * Return: NULL if is size = 0 && a pointer to the array, or NULL if it fails
   **/
 char *create_array(unsigned int size, char c)
 {
