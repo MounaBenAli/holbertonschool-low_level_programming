@@ -17,10 +17,13 @@ int s2_length = strlen(s2);
 int size = s1_length + s2_length + 1;
 char *new;
 
-if (s1 == NULL || s2 == NULL)
+if (s1 == NULL)
+{
 s1 = "";
+}
+
+if (s2 == NULL)
 s2 = "";
-return (NULL);
 
 new = malloc(sizeof(char) * size);
 if (!new)
