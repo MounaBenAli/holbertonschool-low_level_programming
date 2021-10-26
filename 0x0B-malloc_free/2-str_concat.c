@@ -18,6 +18,8 @@ int size = s1_length + s2_length + 1;
 char *new;
 
 if (s1 == NULL || s2 == NULL)
+s1 = "";
+s2 = "";
 return (NULL);
 
 new = malloc(sizeof(char) * size);
