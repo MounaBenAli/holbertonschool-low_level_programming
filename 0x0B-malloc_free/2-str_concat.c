@@ -19,7 +19,7 @@ char *new;
 if (s1 == NULL || s2 == NULL)
 return (NULL);
 
-new = malloc((sizeof(char) * size) + 1);
+new = malloc(sizeof(char) * size);
 if (!new)
 return (NULL);
 
