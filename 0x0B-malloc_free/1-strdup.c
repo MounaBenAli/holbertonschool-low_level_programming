@@ -29,4 +29,3 @@ new[i++] = *str++;
 new[i] = '\0';
 return (new);
 }
-
