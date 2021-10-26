@@ -10,7 +10,7 @@
 **/
 char *str_concat(char *s1, char *s2)
 {
-int i = 0;
+int i = 0, j = 0;
 int s1_length = strlen(s1);
 int s2_length = strlen(s2);
 int size = s1_length + s2_length + 1;
@@ -27,9 +27,9 @@ for (; i < s1_length; i++)
 {
 new[i] = s1[i];
 }
-for (; i < s2_length; i++)
+for (; j < s2_length; j++)
 {
-new[s1_length + i] = s2[i];
+new[s1_length + j] = s2[j];
 new[size - 1] = '\0';
 }
 return (new);
