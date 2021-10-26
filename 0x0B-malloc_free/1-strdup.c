@@ -15,9 +15,7 @@ char *new;
 int i = 0, len = 0;
 
 if (str == NULL)
-{
 return (NULL);
-}
 
 new = (char *)malloc(sizeof(char) * len + 1);
 if (!new)
@@ -26,7 +24,11 @@ return (NULL);
 }
 
 while (*str)
-new[i++] = *str++;
+{new[i++] = *str++;
 new[i] = '\0';
 return (new);
 }
+free (new);
+return (new);
+}
+
