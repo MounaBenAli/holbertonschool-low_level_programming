@@ -23,4 +23,5 @@ while (*str)
 new[i++] = *str++;
 new[i] = '\0';
 return (new);
+free (new);
 }
