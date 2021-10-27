@@ -15,6 +15,7 @@ int **arr;
 arr = malloc(sizeof(int *) * height);
 
 if (!arr)
+free(arr);
 return (NULL);
 
 if (height <= 0)
