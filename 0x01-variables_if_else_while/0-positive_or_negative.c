@@ -22,4 +22,4 @@ printf("%d is positive\n", n);
 else
 printf("0 is zero\n");
 return (0);
-}
+}  
