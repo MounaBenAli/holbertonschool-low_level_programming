@@ -15,15 +15,21 @@ int **arr;
 arr = malloc(sizeof(int *) * height);
 
 if (!arr)
-free(arr);
 return (NULL);
 
 if (height <= 0)
 return (NULL);
 
+if (!arr)
+{
+free(arr);
+return (NULL);
+}
 for (i = 0; i < height; i++)
 {
 arr[i] = malloc(sizeof(int) * width);
 }
 return (arr);
 }
+
+
