@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
-  * *calloc- allocates memory for an array using malloc
+  * _calloc-allocates memory for an array using malloc
   * @nmemb: number of members
   * @size: size
   * Return: pointer to the allocated memory
