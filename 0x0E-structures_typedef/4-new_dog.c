@@ -7,6 +7,7 @@ char *_strdup(char *str);
  *@age:the age of the new do
  *@owner :the new owner of the new dog
  *
+ *Return: pointer to dog_t struct
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -21,6 +22,15 @@ return (NULL);
 namecopy = _strdup(name);
 ownercopy = _strdup(owner);
 
+if (!namecopy)
+{
+return (NULL);
+}
+
+if (!ownercopy)
+{
+return (NULL);
+}
 milo->name = namecopy;
 milo->owner = ownercopy;
 milo->age = age;
