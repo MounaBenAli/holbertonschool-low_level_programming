@@ -1,0 +1,33 @@
+#include "dog.h"
+
+/**
+ * print_dog - prints a variable of type struct dog
+ *@d:the dog to be printed
+ *@name : the name of the dog to be printed
+ *@age :the age of the dog to be printed
+ *@owner :the owner of the dog to be printed
+ *
+ */
+
+void print_dog(struct dog *d)
+{
+	if (d == NULL)
+	return;
+
+	if (d->name == NULL)
+	printf("Name:(nil)\n");
+	else
+	printf("Name: %s\n", d->name);
+
+	if (d->age < 0)
+	printf("Age:(nil)\n");
+	else
+	printf("Age: %.1f\n", d->age);
+
+	if (d->owner == NULL)
+	printf("Owner:(nil)\n");
+	else
+	printf("color: %s\n", d->owner);
+}
+
+
