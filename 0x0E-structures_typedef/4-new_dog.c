@@ -24,11 +24,14 @@ ownercopy = _strdup(owner);
 
 if (!namecopy)
 {
+free(namecopy);
 return (NULL);
 }
 
 if (!ownercopy)
 {
+free(ownercopy);
+free(milo);
 return (NULL);
 }
 milo->name = namecopy;
