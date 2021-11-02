@@ -20,20 +20,20 @@ if (!milo)
 return (NULL);
 
 namecopy = _strdup(name);
-ownercopy = _strdup(owner);
-
-if (!namecopy)
+if (namecopy == NULL)
 {
-free(namecopy);
-return (NULL);
-}
-
-if (!ownercopy)
-{
-free(ownercopy);
 free(milo);
 return (NULL);
 }
+
+ownercopy = _strdup(owner);
+if (ownercopy == NULL)
+{
+free(namecopy);
+free(milo);
+return (NULL);
+}
+
 milo->name = namecopy;
 milo->owner = ownercopy;
 milo->age = age;
@@ -73,3 +73,4 @@ i++;
 new[i] = '\0';
 return (new);
 }
+
