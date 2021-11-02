@@ -19,17 +19,17 @@ milo = malloc(sizeof(dog_t));
 if (!milo)
 return (NULL);
 
-namecopy = _strdup(name);
-if (namecopy == NULL)
+ownercopy = _strdup(owner);
+if (!ownercopy)
 {
 free(milo);
 return (NULL);
 }
 
-ownercopy = _strdup(owner);
-if (ownercopy == NULL)
+namecopy = _strdup(name);
+if (!namecopy)
 {
-free(namecopy);
+free(ownercopy);
 free(milo);
 return (NULL);
 }
