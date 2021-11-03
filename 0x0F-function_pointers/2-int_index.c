@@ -18,7 +18,9 @@ return (-1);
 
 for (index = 0; index < size; index++)
 {
+if (cmp(array[index]))
 return (index);
 }
+
 return (-1);
 }
