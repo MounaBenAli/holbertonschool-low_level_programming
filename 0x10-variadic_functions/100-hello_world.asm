@@ -1,6 +1,4 @@
-/**
- * Write a 64-bit program in assembly that prints Hello, World
- */
+
 
 
           global    main
