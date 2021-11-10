@@ -1,15 +1,22 @@
-## files description
+[I'm an inline-style link](https://www.google.com)
 
-#### [printf.c](./_printf.c)
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-This is the main function file containing the main logic. 
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
 
-#### [type_funcs.c](./type_funcs.c)
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
 
-This file contains the functions to handle each argument type.
+[You can use numbers for reference-style link definitions][1]
 
-#### [std_funcs.c](./std_funcs.c)
+Or leave it empty and use the [link text itself].
 
-This file contains some general purpose functions some are clones of standard c functions.
+URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or <http://www.example.com> and sometimes 
+example.com (but not on Github, for example).
 
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
 
