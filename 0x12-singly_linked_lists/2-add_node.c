@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 
-int _strlen(char *s);
+int _strlen(const char *s);
 /**
  *add_node -  adds a new node at the beginning of a list_t list.
  *@head: pointer to first node
@@ -14,26 +14,21 @@ int _strlen(char *s);
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *newnode;
-	char *s;
-	unsigned int i;
-
+	
+	if (head != NULL && str != NULL)
+	{
 	newnode = malloc(sizeof(list_t));
 	if (newnode == NULL)
-	return (NULL);
+		return (NULL);	
 
-	s = newnode->str;
-	s = strdup(str);
-	i = newnode->len;
-	i = _strlen(s);
-	if (s == NULL)
-	{
-	free(newnode);
-	return (NULL);
-	}
-	newnode->len = i;
+	newnode->str = strdup(str);
+	newnode->len = _strlen(str);
+
 	newnode->next = *head;
 	*head = newnode;
 	return (*head);
+	}	
+	return (0);
 }
 
 /**
@@ -42,10 +37,14 @@ list_t *add_node(list_t **head, const char *str)
   *
   * Return: String length
   */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
-int len;
-for (len = 0; *s != '\0'; s++)
-	len++;
+int len = 0;
+while(*s)
+{
+s++;
+len++;
+}
+
 return (len);
 }
