@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 
+int _strlen(const char *s);
 
 
 /**
@@ -24,7 +25,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	tail->str = strdup(str);
-	tail->len = strlen(str);
+	tail->len = _strlen(str);
 	tail->next = NULL;
 
 	if (*head == NULL)
@@ -36,11 +37,27 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 	temp = *head;
 	while (temp->next != NULL)
-{
+	{
 	temp = temp->next;
+	}
 	temp->next = tail;
 	return (temp);
 }
-	return (0);
-	}
+}
+
+/**
+  * _strlen - Returns the length of a string
+  * @s: String to count
+  *
+  * Return: String length
+  */
+int _strlen(const char *s)
+{
+int len = 0;
+while (*s)
+{
+s++;
+len++;
+}
+return (len);
 }
