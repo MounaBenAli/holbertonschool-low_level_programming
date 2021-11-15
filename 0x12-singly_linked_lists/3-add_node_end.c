@@ -6,11 +6,10 @@
 
 
 /**
- *add_node -  adds a new node at the end of a list_t list.
- *@head: pointer to first node
- *@temp: pointer to traverse the linked list
- *@str:string
- *Return: the address of the new element, or NULL if it failed
+ * add_node_end - adds a new node at the end of a list_t list.
+ * @head: pointer to first node
+ * @str:string
+ * Return: the address of the new element, or NULL if it failed
  */
 
 list_t *add_node_end(list_t **head, const char *str)
@@ -30,17 +29,18 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (*head == NULL)
 	{
-	tail = *head;
-	return (tail);
+	*head = tail;
+	return (*head);
 	}
-    else
-    {
-      while (temp->next != NULL)
-        {
-            temp = temp->next;
-	}
-       temp->next = NULL;
+	else
+	{
+	temp = *head;
+	while (temp->next != NULL)
+{
+	temp = temp->next;
+	temp->next = tail;
 	return (temp);
-    }
-return (0);
+}
+	return (0);
+	}
 }
