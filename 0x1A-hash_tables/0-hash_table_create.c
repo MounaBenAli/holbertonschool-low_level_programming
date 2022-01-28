@@ -18,9 +18,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (new_table == NULL)
 		return (NULL);
 
-	/**allocate table entries**/	
+	/**allocate table entries**/
 	new_table->size = size;
-	new_table->array = malloc(sizeof(hash_node_t *) *size);
+	new_table->array = malloc(sizeof(hash_node_t *) * size);
 	if (new_table->array == NULL)
 	{
 		free(new_table);
