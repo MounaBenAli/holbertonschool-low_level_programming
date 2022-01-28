@@ -8,7 +8,7 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int i = 0;
+	/**unsigned long int i = 0;**/
 	hash_table_t *new_table;
 
 	/**allocate table**/
@@ -26,8 +26,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(new_table);
 		return (NULL);
 	}
-	for (; i < size; i++)
-		new_table->array[i] = NULL;
+	/**for (; i < size; i++)**/
+		/**new_table->array[i] = NULL;**/
 		/**return pointer to new hash table**/
 	return (new_table);
 }
