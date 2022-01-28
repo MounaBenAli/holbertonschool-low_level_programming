@@ -10,7 +10,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i = 0;
 	/**allocate table**/
-	hash_table_t *newtable = malloc(sizeof(hash_table_t));
+	hash_table_t *newtable = malloc(sizeof(hash_table_t) * 1);
 
 	/*if error in mem allocation return NULL*/
 	if (!newtable)
@@ -19,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	/**allocate table entries**/
-	newtable->array = malloc(sizeof(hash_node_t *));
+	newtable->array = malloc(sizeof(hash_node_t *) *size);
 
 	/**Set each to NULL needed for proper operation**/
 	for (; i < size; ++i)
