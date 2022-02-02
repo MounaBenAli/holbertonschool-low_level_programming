@@ -1,41 +1,87 @@
 #include "hash_tables.h"
+
+/**
+ * create_element - creates new node
+ * @key : the key cannot be empty str
+ * @value : the value associated with key
+ *
+ * Return: new node
+ */
+hash_node_t *create_element(const char *key, const char *value)
+{
+	hash_node_t *new;
+
+	new = malloc(sizeof(hash_node_t));
+
+	if (!new)
+		return (NULL);
+	if (new)
+	{
+		new->key = strdup(key);
+		new->value = strdup(value);
+		new->next = NULL;
+	}
+
+	return (new);
+
+}
+
+
+/** Handle Collision function**/
+void handle_collision(hash_node_t **table, const  char *key,
+const char *value, size_t index)
+{
+	hash_node_t *element, *head;
+
+
+	head = table[index];
+
+	while (head)
+	{
+		if (strcmp(head->key, key) == 0)
+		{
+			free(head->value);
+			head->value = strdup(value);
+		}
+		head = head->next;
+	}
+	/** add new element**/
+		element = create_element(key, value);
+		element->next = table[index];
+		table[index] = element;
+}
+
 /**
  * hash_table_set - adds an element to the hash table
  * @ht : the hash table to be updated with key/value pair
  * @key : the key cannot be empty str
  * @value : the value associated with key
- * 
+ *
  * Return: 1 if success otherwise 0
  */
-
-int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	unsigned long int  index;
+	hash_node_t *element, **table;
 
-//Insert element
 
-    int h = hash_djb2(key, ht->size);
-    int i = 0;
+	table = ht->array;
+	index = key_index((const unsigned char *)key, ht->size);
 
-    /* if hash is full and key doesn't exist your previous loop would have gone on forever, I've added a check */
-    /* also notice that I check if table[h] has empty key, not if it's null as this is not a pointer */
-    while(ht->array[h].key != 0 && (i < ht->size)) 
-    {
-        if(ht->array[h].key == key)
-         {
-            ht->array[h].value = value;
-            return; /* break is intended to quit the loop, but actually we want to exit the function altogether */
-        }
+	if (strlen(key) == 0)
+	{
+		return (0);
+	}
 
-        h = (h + 1) % ht->size; /* changed 11 to the size specified */
-        i++; /* advance the loop index */
-    }
+	if (table[index] != NULL)
+	/** here we have collision**/
+	{
+		handle_collision(table, key, value, index);
+		return (1);
+	}
 
-    /* okay found a free slot, store it there */
-    if(ht->table[h].key == 0) 
-    {
-        /* we now do direct assignment, no need for pointers */
-        ht->array[h].key = key;
-        ht->array[h].value = value;
-    }
+	    element = create_element(key, value);
+		table[index] = element;
+
+	return (1);
 }
-
