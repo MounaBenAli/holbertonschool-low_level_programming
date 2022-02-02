@@ -28,7 +28,7 @@ hash_node_t *create_element(const char *key, const char *value)
 
 
 /** Handle Collision function**/
-void handle_collision(hash_node_t **table, const  char *key,
+hash_node_t *handle_collision(hash_node_t **table, const  char *key,
 const char *value, size_t index)
 {
 	hash_node_t *element, *head;
@@ -42,6 +42,7 @@ const char *value, size_t index)
 		{
 			free(head->value);
 			head->value = strdup(value);
+			return (head);
 		}
 		head = head->next;
 	}
@@ -49,6 +50,7 @@ const char *value, size_t index)
 		element = create_element(key, value);
 		element->next = table[index];
 		table[index] = element;
+		return (element);
 }
 
 /**
@@ -64,7 +66,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int  index;
 	hash_node_t *element, **table;
 
-
+	if (ht == NULL)
+		return (0);
+		
 	table = ht->array;
 	index = key_index((const unsigned char *)key, ht->size);
 
@@ -76,11 +80,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (table[index] != NULL)
 	/** here we have collision**/
 	{
-		handle_collision(table, key, value, index);
+		if (!handle_collision(table, key, value, index))
+			return (0);
+		
 		return (1);
 	}
 
 	    element = create_element(key, value);
+		if (element == NULL)
+			return (0);
 		table[index] = element;
 
 	return (1);
