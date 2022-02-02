@@ -68,7 +68,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL)
 		return (0);
-		
+
 	table = ht->array;
 	index = key_index((const unsigned char *)key, ht->size);
 
@@ -82,7 +82,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (!handle_collision(table, key, value, index))
 			return (0);
-		
+
 		return (1);
 	}
 
