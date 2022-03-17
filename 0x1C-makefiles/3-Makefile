@@ -1,0 +1,29 @@
+# Makefile with rules all, clean, oclean, fclean, re
+CC = gcc
+SRC = main.c school.c
+OBJ  = ${SRC:%.c=%.o}
+NAME = school
+RM =  rm 
+
+# all : builds the executable
+all: ${OBJ} 
+	${CC} ${OBJ} -o ${NAME}
+
+# clean: deletes all Emacs and Vim temporary files along with the executable
+clean: ${OBJ}
+	${RM}-f *~ ${NAME}
+
+# oclean: deletes the object files
+oclean: ${OBJ}
+	${RM}-f ${OBJ}
+
+# fclean: deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: 
+	${RM}-f *~ ${NAME}
+	${RM}-f ${OBJ}
+
+# re: forces recompilation of all source files
+re: ${OBJ}
+	${RM}-f ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+	
