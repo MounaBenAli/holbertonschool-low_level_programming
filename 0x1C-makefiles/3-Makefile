@@ -10,20 +10,15 @@ all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 # clean: deletes all Emacs and Vim temporary files along with the executable
-clean: ${OBJ}
+clean: 
 	${RM}-f *~ ${NAME}
 
 # oclean: deletes the object files
-oclean: ${OBJ}
+oclean: 
 	${RM}-f ${OBJ}
 
 # fclean: deletes all Emacs and Vim temporary files, the executable, and the object files
-fclean: 
-	${RM}-f *~ ${NAME}
-	${RM}-f ${OBJ}
+fclean: clean oclean
 
 # re: forces recompilation of all source files
-re: ${OBJ}
-	${RM}-f ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
-	
+re: oclean all
