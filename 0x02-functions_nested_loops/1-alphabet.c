@@ -4,7 +4,7 @@
 *
 * Return: Always(Success)
 */
-void print_alphabet(void)
+oid print_alphabet(void)
 {
 char c;
 for (c = 'a'; c <= 'z'; c++)
