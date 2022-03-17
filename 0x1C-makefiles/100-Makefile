@@ -4,7 +4,7 @@ SRC = main.c school.c
 OBJ  = ${SRC:.c=.o}
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
-	
+
 # A phony target is the name for a recipe to be executed when you make an explicit request. 
 .PHONY: all clean oclean fclean re
 
@@ -15,11 +15,11 @@ all: m.h ${OBJ}
 
 # clean: deletes all Emacs and Vim temporary files along with the executable
 clean: 
-	${RM}-f *~ ${NAME}
+	${RM} *~ ${NAME}
 
 # oclean: deletes the object files
 oclean: 
-	${RM}-f ${OBJ}
+	${RM} ${OBJ}
 
 # fclean: deletes all Emacs and Vim temporary files, the executable, and the object files
 fclean: clean oclean
