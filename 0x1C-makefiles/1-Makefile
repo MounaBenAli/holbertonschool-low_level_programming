@@ -1,5 +1,5 @@
 # build an executable named school from school.c
 CC := gcc
-SRC := *.c 
-all: school.c
-	gcc main.c school.c -o school
+SRC := $(wildcard *.c)
+all: SRC
+	${CC} -o school
