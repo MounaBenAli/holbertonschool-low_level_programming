@@ -11,13 +11,19 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
-	unsigned int i = 0;
+	unsigned int i;
 
-	if (!array)
+	if (array == NULL)
 		return (-1);
 
 	for (i = 0; i < size; i++)
+	{
 		if (array[i] == value)
-			return (i);
-	return (-1);
+		break;
+	}
+
+	if (i == size)
+		return (-1);
+
+	return (i);
 }
