@@ -21,9 +21,6 @@ int binary_search(int *array, size_t size, int value)
 
 	i = _binarySearch(array, left, right, value);
 
-	if (array == NULL && array[i] != value)
-		return (-1);
-
 	return (i);
 }
 
