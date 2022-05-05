@@ -16,6 +16,9 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t i, right = size - 1, left = 0;
 
+	if (array == NULL)
+		return (-1);
+
 	i = _binarySearch(array, left, right, value);
 
 	if (array == NULL && array[i] != value)
@@ -87,4 +90,4 @@ void _printSearch(int *array, int start, int end)
 	}
 
 	printf("\n");
-	}
+}
